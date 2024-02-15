@@ -17,7 +17,6 @@ const database = new DatabaseMemory();
 
 server.post("/videos", (request, reply) => {
   const { title, description, duration } = request.body;
-  console.log("🚀 ~ body:", body);
 
   database.create({ title, description, duration });
 
