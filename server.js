@@ -24,7 +24,10 @@ server.post("/videos", (request, reply) => {
 });
 
 server.get("/videos", () => {
-  return "Hello World!";
+  const videos = database.list();
+  console.log("🚀 ~ videos:", videos);
+
+  return videos;
 });
 
 server.put("/videos/:id", () => {

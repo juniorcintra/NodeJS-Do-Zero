@@ -6,3 +6,8 @@ Content-type: application/json
   "description": "Este é o video 1",
   "duration": 180
 }
+
+
+###
+
+GET http://localhost:3333/videos
