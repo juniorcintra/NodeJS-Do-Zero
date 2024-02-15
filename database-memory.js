@@ -4,7 +4,12 @@ export class DatabaseMemory {
   #videos = new Map();
 
   list() {
-    return Array.from(this.#videos.values());
+    return Array.from(this.#videos.entries()).map((videoArr) => {
+      const id = videoArr[0];
+      const data = videoArr[1];
+
+      return { id, ...data };
+    });
   }
 
   create(video) {
